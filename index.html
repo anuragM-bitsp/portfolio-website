@@ -99,6 +99,26 @@ I am passionate about leveraging my interdisciplinary knowledge to drive innovat
         </div>
     </div>
 </div>	
+
+
+    <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({offset:0});
